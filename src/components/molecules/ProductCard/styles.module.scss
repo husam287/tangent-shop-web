@@ -1,0 +1,21 @@
+@import "@/styles/all";
+
+.container {
+  border: 1px solid $grey;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-width: 20rem;
+}
+
+.productHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productContent {
+  padding: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
