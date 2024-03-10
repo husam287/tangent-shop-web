@@ -1,0 +1,16 @@
+@import "@/styles/all";
+
+.container {
+  box-shadow: 0 0.125rem 0.25rem rgba($dark, 0.075);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4rem;
+  padding: 1rem;
+}
