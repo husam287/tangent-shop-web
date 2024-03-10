@@ -14,9 +14,12 @@ export default function Text({
   const TextNode = variant
 
   const fontSizeMap = new Map<Size, string>([
-    ["sm", "0.5rem"],
+    ["sm", "0.75rem"],
     ["md", "1rem"],
-    ["lg", "2rem"],
+    ["lg", "1.25rem"],
+    ["xl", "1.5rem"],
+    ["2x", "1.75rem"],
+    ["3x", "2rem"],
   ])
   const defaultFontSize = fontSizeMap.get('sm') as string
   const selectedFontSize = fontSizeMap.get(fontSize) || defaultFontSize
