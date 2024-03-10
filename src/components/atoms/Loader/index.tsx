@@ -1,7 +1,7 @@
 import { LoaderProps } from "./types";
 import styles from './styles.module.scss'
 import { Size } from "@/@types/size";
-import { CustomCSS } from "@/@types/CustomCss";
+import { CustomCSS } from "@/@types/customCss";
 
 export default function Loader({ size = 'sm' }: LoaderProps) {
   const sizeMap = new Map<Size, number>([

@@ -4,4 +4,6 @@ export interface CustomCSS extends CSSProperties {
     '--height'?: string;
     '--width'?: string;
     '--color'?: string;
+    '--fontWeight'?: number;
+    '--fontSize'?: string;
 }
