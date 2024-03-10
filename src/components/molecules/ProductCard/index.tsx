@@ -18,6 +18,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         src={product.thumbnail}
         alt={product.title}
         height="20rem"
+        isFullWidth
       />
 
       <div className={styles.productContent}>
