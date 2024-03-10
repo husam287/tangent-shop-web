@@ -1,6 +1,7 @@
+import { Color } from "@/@types/color"
 import { Size } from "@/@types/size"
 
 export interface LoaderProps {
-    color?: string
+    color?: Color
     size?: Size
 }

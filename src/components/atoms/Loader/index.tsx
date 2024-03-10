@@ -2,8 +2,9 @@ import { LoaderProps } from "./types";
 import styles from './styles.module.scss'
 import { Size } from "@/@types/size";
 import { CustomCSS } from "@/@types/customCss";
+import COLORS from "@/constant/colors";
 
-export default function Loader({ size = 'sm' }: LoaderProps) {
+export default function Loader({ size = 'sm', color = 'primary' }: LoaderProps) {
   const sizeMap = new Map<Size, number>([
     ["sm", 2],
     ["md", 4],
@@ -17,7 +18,14 @@ export default function Loader({ size = 'sm' }: LoaderProps) {
 
   return (
     <div className={styles.container}>
-      <div className={styles["lds-ripple"]} style={{ '--width': `${width}rem`, '--height': `${height}rem` } as CustomCSS}>
+      <div
+        className={styles["lds-ripple"]}
+        style={{
+          '--width': `${width}rem`,
+          '--height': `${height}rem`,
+          '--color': COLORS[color]
+        } as CustomCSS}
+      >
         <div />
         <div />
       </div>
