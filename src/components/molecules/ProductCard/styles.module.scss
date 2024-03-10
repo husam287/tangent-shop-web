@@ -5,6 +5,10 @@
   border-radius: 1rem;
   overflow: hidden;
   min-width: 20rem;
+
+  @include mobile {
+    min-width: 100%;
+  }
 }
 
 .productHeader {
