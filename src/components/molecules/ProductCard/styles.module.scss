@@ -14,8 +14,12 @@
 }
 
 .productContent {
-  padding: 0.5rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  padding: 1rem;
+
+  > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
 }

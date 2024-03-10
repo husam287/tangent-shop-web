@@ -4,34 +4,43 @@ import styles from './styles.module.scss'
 import Image from "@/components/atoms/Image";
 import Text from "@/components/atoms/Text";
 import toCurrency from "@/utils/toCurrency";
+import Button from "@/components/atoms/Button";
 
-export default function ProductCard({ }: ProductCardProps) {
+export default function ProductCard({ product }: ProductCardProps) {
+  const onAddToCart = () => {
+    console.log(product)
+  }
+
   return (
     <div className={classes([styles.container])}>
       <Image
-        src="/test-image.jpg"
+        src={product.thumbnail}
+        alt={product.title}
         height="20rem"
-        alt="sss"
       />
 
       <div className={styles.productContent}>
-        <div className={styles.productHeader}>
-          <Text
-            text="Test product"
-            color="primary"
-            fontSize="lg"
-            variant="span"
-            fontWeight="bold"
-          />
-          <Text
-            text="smartphone"
-            color="dark"
-            fontWeight="light"
-            fontSize="md"
-          />
+        <div>
+          <div className={styles.productHeader}>
+            <Text
+              text={product.title}
+              color="primary"
+              fontSize="lg"
+              variant="span"
+              fontWeight="bold"
+            />
+            <Text
+              text={product.category}
+              color="dark"
+              fontWeight="light"
+              fontSize="md"
+            />
+          </div>
+
+          <Text text={`${toCurrency(product.price)}`} fontWeight="bold" color="primary" fontSize="lg" />
         </div>
 
-        <Text text={`${toCurrency(200)}`} fontWeight="bold" color="primary" fontSize="lg"/>
+        <Button text="Add to cart" variant="primary" isFullWidth onClick={onAddToCart} />
       </div>
     </div>
   );
