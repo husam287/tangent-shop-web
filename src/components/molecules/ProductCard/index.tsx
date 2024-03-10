@@ -5,6 +5,7 @@ import Image from "@/components/atoms/Image";
 import Text from "@/components/atoms/Text";
 import toCurrency from "@/utils/toCurrency";
 import Button from "@/components/atoms/Button";
+import { IoCartOutline } from "react-icons/io5";
 
 export default function ProductCard({ product }: ProductCardProps) {
   const onAddToCart = () => {
@@ -40,7 +41,13 @@ export default function ProductCard({ product }: ProductCardProps) {
           <Text text={`${toCurrency(product.price)}`} fontWeight="bold" color="primary" fontSize="lg" />
         </div>
 
-        <Button text="Add to cart" variant="primary" isFullWidth onClick={onAddToCart} />
+        <Button
+          text="Add to cart"
+          variant="primary"
+          isFullWidth
+          prefix={<IoCartOutline fontSize="1.5rem" />}
+          onClick={onAddToCart}
+        />
       </div>
     </div>
   );
