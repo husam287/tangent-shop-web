@@ -1,0 +1,55 @@
+@import "@/styles/all";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: calc(var(--height) / 20) solid $primary-clr;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+
+  @keyframes lds-ripple {
+    0% {
+      top: calc(var(--height) * 0.45);
+      left: calc(var(--height) * 0.45);
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: calc(var(--height) * 0.45);
+      left: calc(var(--height) * 0.45);
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: calc(var(--height) * 0.45);
+      left: calc(var(--height) * 0.45);
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: calc(var(--height) * 0.9);
+      height: calc(var(--height) * 0.9);
+      opacity: 0;
+    }
+  }
+}
