@@ -1,0 +1,12 @@
+import { render, screen } from "@testing-library/react"
+import {{extractName name}} from "."
+
+describe("<{{extractName name}} />", () => {
+    it("should rendered", () => {
+
+        render(<{{extractName name}} />)
+        const element = screen.getByTestId("{{extractName name}}")
+
+        expect(element).toBeInTheDocument()
+    })
+})
