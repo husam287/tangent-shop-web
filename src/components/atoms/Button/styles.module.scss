@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 1.5rem;
   height: 3rem;
   min-width: 10rem;
@@ -81,4 +82,8 @@
     border-right: 1px solid $light;
     border-top: 1px solid $light;
   }
+}
+
+.fullWidth {
+  width: 100%;
 }

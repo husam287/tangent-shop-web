@@ -4,4 +4,5 @@ export interface ButtonProps {
     text?: string
     onClick?: () => void
     variant?: ButtonVariant
+    isFullWidth?: boolean
 }
