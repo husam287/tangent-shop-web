@@ -14,3 +14,16 @@
   height: 4rem;
   padding: 1rem;
 }
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
