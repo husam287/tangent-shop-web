@@ -51,6 +51,11 @@ const componentPlopGeneratorObject = {
       path: "src/components/{{capitallizeComponentName name}}/index.test.tsx",
       templateFile: "templates/Test.tsx.hbs",
     },
+    {
+      type: "add",
+      path: "src/components/{{capitallizeComponentName name}}/index.stories.tsx",
+      templateFile: "templates/ReactStory.tsx.hbs",
+    },
   ],
 }
 
@@ -121,6 +126,16 @@ module.exports = function (plop) {
       return toCapitalize(fullPath)
     }
   });
+
+  plop.setHelper('extractStoryPath', (fullPath) => {
+    const parts = fullPath.split('/')
+    if (parts?.length > 0) {
+      const manipulatedParts = parts.map(item => toCapitalize(item))
+      return manipulatedParts?.join("/")
+    } else {
+      return toCapitalize(fullPath)
+    }
+  })
 
   plop.setHelper('preCurly', t => `{${t}}`);
 };
