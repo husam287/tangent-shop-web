@@ -1,5 +1,10 @@
 @import "@/styles/all";
 
-.container {
-  position: relative;
+.image {
+  width: auto;
+  object-fit: cover;
+}
+
+.fullWidth {
+  width: 100%;
 }
