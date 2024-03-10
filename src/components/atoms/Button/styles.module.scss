@@ -42,43 +42,43 @@
 }
 
 .btn-primary {
-  background-color: $primary-clr;
-  border: 1px solid $primary-clr;
-  color: $light-clr;
+  background-color: $primary;
+  border: 1px solid $primary;
+  color: $light;
 
   &:hover {
-    background-color: $light-clr;
-    color: $primary-clr;
+    background-color: $light;
+    color: $primary;
   }
 
   &::after {
-    border-bottom: 1px solid $primary-clr;
-    border-left: 1px solid $primary-clr;
+    border-bottom: 1px solid $primary;
+    border-left: 1px solid $primary;
   }
 
   &::before {
-    border-right: 1px solid $primary-clr;
-    border-top: 1px solid $primary-clr;
+    border-right: 1px solid $primary;
+    border-top: 1px solid $primary;
   }
 }
 
 .btn-secondary {
-  background-color: $light-clr;
-  border: 1px solid $light-clr;
-  color: $primary-clr;
+  background-color: $light;
+  border: 1px solid $light;
+  color: $primary;
 
   &:hover {
-    background-color: $primary-clr;
-    color: $light-clr;
+    background-color: $primary;
+    color: $light;
   }
 
   &::after {
-    border-bottom: 1px solid $light-clr;
-    border-left: 1px solid $light-clr;
+    border-bottom: 1px solid $light;
+    border-left: 1px solid $light;
   }
 
   &::before {
-    border-right: 1px solid $light-clr;
-    border-top: 1px solid $light-clr;
+    border-right: 1px solid $light;
+    border-top: 1px solid $light;
   }
 }
