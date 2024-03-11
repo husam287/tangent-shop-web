@@ -3,13 +3,15 @@ import { TextProps, TextWeight } from "./types";
 import { CustomCSS } from "@/@types/customCss";
 import styles from './styles.module.scss'
 import COLORS from "@/constant/colors";
+import classes from "@/utils/classes";
 
 export default function Text({
   text = "",
   variant = "span",
   fontSize = "md",
   fontWeight = "normal",
-  color = "primary"
+  color = "primary",
+  className
 }: TextProps) {
   const TextNode = variant
 
@@ -40,7 +42,7 @@ export default function Text({
 
   return (
     <TextNode
-      className={styles.text}
+      className={classes([styles.text, className])}
       style={textStyle}
     >
       {text}

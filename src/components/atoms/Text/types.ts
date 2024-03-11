@@ -10,4 +10,5 @@ export interface TextProps {
     fontSize?: Size
     fontWeight?: TextWeight
     color?: Color
+    className?: string
 }
