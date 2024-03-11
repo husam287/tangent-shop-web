@@ -1,6 +1,12 @@
 @import "@/styles/all";
 
 .container {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: $light;
   box-shadow: 0 0.125rem 0.25rem rgba($dark, 0.075);
 }
 

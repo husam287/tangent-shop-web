@@ -18,6 +18,10 @@
   &.opened {
     transform: translateX(0);
   }
+
+  @include mobile {
+    width: 75vw;
+  }
 }
 
 .header {
@@ -73,4 +77,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include mobile{
+    button{
+      height: 3.5rem;
+      width: 100%;
+    }
+  }
 }
