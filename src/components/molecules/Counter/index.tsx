@@ -1,3 +1,5 @@
+'use client'
+
 import classes from "@/utils/classes";
 import { CounterProps } from "./types";
 import styles from './styles.module.scss'
@@ -6,14 +8,14 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Text from "@/components/atoms/Text";
 
-export default function Counter({ 
+export default function Counter({
   initValue = 1,
   onCounterChange,
   minValue = 1,
   onReachedToMinValue,
- }: CounterProps) {
+}: CounterProps) {
   const [counter, setcounter] = useState(initValue)
-  
+
   const onIncreaseCounter = () => {
     onCounterChange?.(counter + 1);
     setcounter(counter + 1);

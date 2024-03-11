@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.scss";
 import Navbar from "@/components/organisms/Navbar";
 import styles from './page.module.scss'
+import { CartSidebarProvider } from "@/context/cartSidebar";
+import CartSidebar from "@/components/organisms/CartSidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,16 +19,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <header className={styles.header}>
-          <Navbar />
-        </header>
+    <CartSidebarProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <header className={styles.header}>
+            <Navbar />
+            <CartSidebar />
+          </header>
 
-        <main className="container">
-          {children}
-        </main>
-      </body>
-    </html>
+          <main className="container">
+            {children}
+          </main>
+        </body>
+      </html>
+    </CartSidebarProvider>
   );
 }

@@ -40,6 +40,7 @@
     "plop": "^4.0.1",
     "sass": "^1.71.1",
     "storybook": "^7.6.17",
+    "storybook-react-context": "^0.6.0",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   }
