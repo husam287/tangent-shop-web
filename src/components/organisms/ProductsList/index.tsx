@@ -7,7 +7,7 @@ export default function ProductsList({ products }: ProductsListProps) {
   return (
     <div className={classes([styles.container])}>
       {products?.map(item => (
-        <ProductCard product={item} />
+        <ProductCard product={item} key={item.id} />
       ))}
     </div>
   );

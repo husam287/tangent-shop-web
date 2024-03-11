@@ -1,7 +1,6 @@
 import { PaginationParams } from "./general";
 
 export interface GetProductParams extends PaginationParams {
-  q?: string;
 }
 
 export interface Product {

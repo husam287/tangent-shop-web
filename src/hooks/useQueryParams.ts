@@ -1,3 +1,5 @@
+'use client'
+
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useCallback } from "react"
 
@@ -17,7 +19,7 @@ export default function useQueryParams() {
     )
 
     const getQuery = (key: string) => {
-        return searchParams.get('search')
+        return searchParams.get(key)
     }
 
     const setQuery = (key: string, value: string) => {

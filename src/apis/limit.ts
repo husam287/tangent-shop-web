@@ -1,2 +1,2 @@
-const LIMIT = 10;
+const LIMIT = 12;
 export default LIMIT;

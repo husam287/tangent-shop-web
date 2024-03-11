@@ -1,0 +1,13 @@
+@import "@/styles/all";
+
+.container {
+  margin-top: var(--top);
+  margin-bottom: var(--bottom);
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,3 +1,5 @@
+'use client'
+
 import classes from '@/utils/classes'
 import styles from './styles.module.scss'
 import { ButtonProps, ButtonVariant } from './types'

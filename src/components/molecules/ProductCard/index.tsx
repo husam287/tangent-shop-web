@@ -1,3 +1,5 @@
+'use client'
+
 import classes from "@/utils/classes";
 import { ProductCardProps } from "./types";
 import styles from './styles.module.scss'
@@ -18,6 +20,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         src={product.thumbnail}
         alt={product.title}
         height="20rem"
+        imgWidth={500}
+        imgHeight={300}
         isFullWidth
       />
 
