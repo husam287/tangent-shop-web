@@ -13,7 +13,6 @@ export default function Image({
 }: ImageProps) {
   return (
     <NextImage
-      objectFit="cover"
       width={imgWidth}
       height={imgHeight}
       src={src}
