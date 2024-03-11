@@ -7,16 +7,15 @@ import { useContext } from "react";
 import { CartSidebarContext } from "@/context/cartSidebar";
 import Button from "@/components/atoms/Button";
 import { IoClose } from "react-icons/io5";
-import CART from "@/mockups/cart";
 import CartItem from "@/components/molecules/CartItem";
 import toCurrency from "@/utils/toCurrency";
 import Text from "@/components/atoms/Text";
+import { CartContext } from "@/context/cart";
 
 export default function CartSidebar({ }: CartSidebarProps) {
+  const { cart } = useContext(CartContext)
   const { sidebarStatus, closeSidebar } = useContext(CartSidebarContext)
   const isVisbleCartSidebar = sidebarStatus === 'opened'
-
-  const cart = CART
 
   const onDismiss = () => {
     closeSidebar()
@@ -61,13 +60,20 @@ export default function CartSidebar({ }: CartSidebarProps) {
 
         <div className={styles.mainContent}>
           {cart.map(item => (
-            <CartItem product={item.product} quantity={item.quantity} key={item.product.id} />
+            <CartItem
+              key={item.product.id}
+              product={item.product}
+              quantity={item.quantity}
+            />
           ))
           }
         </div>
 
         <div className={styles.footer}>
-          <Button text={`CHECKOUT (${getTotalPrice()})`} onClick={onGoToCheckout} />
+
+          {!!cart?.length &&
+            <Button text={`CHECKOUT (${getTotalPrice()})`} onClick={onGoToCheckout} />
+          }
         </div>
       </div>
     </aside>

@@ -8,16 +8,16 @@ interface CartSidebarContextValueType {
     closeSidebar: () => void;
 }
 
-const initalState: CartSidebarContextValueType = {
+const initialState: CartSidebarContextValueType = {
     sidebarStatus: "closed",
     closeSidebar: () => { },
     openSidebar: () => { }
 }
 
-const CartSidebarContext = createContext<CartSidebarContextValueType>(initalState)
+const CartSidebarContext = createContext<CartSidebarContextValueType>(initialState)
 
 const CartSidebarProvider = ({ children }: { children: ReactNode }) => {
-    const [sidebarStatus, setsidebarStatus] = useState<'opened' | 'closed'>("opened")
+    const [sidebarStatus, setsidebarStatus] = useState<'opened' | 'closed'>(initialState.sidebarStatus)
 
     const openSidebar = useCallback(() => {
         setsidebarStatus("opened");

@@ -31,6 +31,7 @@ export default function Counter({
   };
 
   useEffect(() => {
+    console.log(initValue, "prooooo")
     if (counter === initValue) return;
 
     setcounter(initValue);

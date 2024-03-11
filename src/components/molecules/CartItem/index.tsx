@@ -1,17 +1,34 @@
+import { useContext, useMemo } from "react";
 import classes from "@/utils/classes";
-import { CartItemProps } from "./types";
-import styles from './styles.module.scss'
 import Image from "@/components/atoms/Image";
 import Text from "@/components/atoms/Text";
 import Counter from "@/components/molecules/Counter";
 import toCurrency from "@/utils/toCurrency";
+import { CartContext } from "@/context/cart";
+import { debounce } from "lodash-es";
+import { CartItemProps } from "./types";
+import styles from './styles.module.scss'
 
 export default function CartItem({
   product,
   quantity,
-  onDeleteItem,
-  onQuantityChange
 }: CartItemProps) {
+  const { removeCartItem, editCartItem } = useContext(CartContext)
+
+  const onDeleteItem = () => {
+    console.log("hiii", product)
+    removeCartItem({ productId: product.id })
+  }
+
+  const onQuantityChange = (e: number) => {
+    editCartItem({ productId: product.id, quantity: e })
+  }
+
+  const debouncedEditCartHandler = useMemo(
+    () => debounce(onQuantityChange, 300),
+    [onQuantityChange]
+  );
+
   return (
     <div className={classes([styles.container])}>
       <div className={styles.imageContainer}>
@@ -41,7 +58,7 @@ export default function CartItem({
         <Counter
           minValue={0}
           initValue={quantity}
-          onCounterChange={onQuantityChange}
+          onCounterChange={debouncedEditCartHandler}
           onReachedToMinValue={onDeleteItem}
         />
       </div>

@@ -8,10 +8,17 @@ import Text from "@/components/atoms/Text";
 import toCurrency from "@/utils/toCurrency";
 import Button from "@/components/atoms/Button";
 import { IoCartOutline } from "react-icons/io5";
+import { useContext } from "react";
+import { CartContext } from "@/context/cart";
+import { CartSidebarContext } from "@/context/cartSidebar";
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const { addCartItem } = useContext(CartContext)
+  const { openSidebar } = useContext(CartSidebarContext)
+
   const onAddToCart = () => {
-    console.log(product)
+    addCartItem({ product, quantity: 1 })
+    openSidebar()
   }
 
   return (
