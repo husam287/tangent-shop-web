@@ -7,15 +7,17 @@ import ReactPaginate from "react-paginate";
 import LIMIT from "@/apis/limit";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import { BiDotsHorizontal } from "react-icons/bi";
+import useQueryParams from "@/hooks/useQueryParams";
 
-export default function PaginationBar({ totalCount, currentPage = 1, onSelectPage }: PaginationBarProps) {
+export default function PaginationBar({ totalCount }: PaginationBarProps) {
+  const { getQuery, setQuery } = useQueryParams()
+  const currentPage = getQuery('page') || 1
+
   const handlePageClick = (e: {
     selected: number;
   }) => {
     const targetPage = e.selected + 1
-    if (currentPage === targetPage) return
-
-    onSelectPage?.(targetPage)
+    setQuery("page", `${targetPage}`)
   }
 
   return (
@@ -27,7 +29,7 @@ export default function PaginationBar({ totalCount, currentPage = 1, onSelectPag
         nextLabel={<IoIosArrowDropright />}
         previousLabel={<IoIosArrowDropleft />}
         breakLabel={<BiDotsHorizontal />}
-        initialPage={currentPage - 1}
+        initialPage={+currentPage}
       />
     </div>
   );
