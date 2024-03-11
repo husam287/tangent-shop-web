@@ -16,7 +16,6 @@ export default function CartItem({
   const { removeCartItem, editCartItem } = useContext(CartContext)
 
   const onDeleteItem = () => {
-    console.log("hiii", product)
     removeCartItem({ productId: product.id })
   }
 

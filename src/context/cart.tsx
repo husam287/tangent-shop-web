@@ -55,8 +55,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
             (item) => item.product.id === payload.productId
         );
 
-        console.log(targetCartItemIndex, "hiiiiii")
-
         if (targetCartItemIndex >= 0) {
             newCart[targetCartItemIndex] = {
                 ...newCart[targetCartItemIndex],
@@ -65,8 +63,6 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
 
             setCart(newCart)
         }
-
-        console.log(newCart)
     }, [cart])
 
     const contextValue = useMemo(() => ({
