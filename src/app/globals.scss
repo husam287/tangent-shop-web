@@ -14,10 +14,11 @@ html {
   }
 }
 
-body {
+.container {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding-inline: 1rem;
 
   @include mobile {
     max-width: 100%;

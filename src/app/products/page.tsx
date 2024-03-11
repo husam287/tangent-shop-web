@@ -16,7 +16,7 @@ export default async function Page({
   const productsData = await getProducts({ skip })
 
   return (
-    <main>
+    <>
       <section className={styles.container}>
         <ProductsList products={productsData.products} />
       </section>
@@ -26,6 +26,6 @@ export default async function Page({
           totalCount={productsData.total}
         />
       </Paper>
-    </main>
+    </>
   );
 }
