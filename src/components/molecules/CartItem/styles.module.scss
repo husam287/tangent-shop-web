@@ -1,0 +1,17 @@
+@import "@/styles/all";
+
+.container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cartItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.imageContainer {
+  width: 8rem;
+  height: 8rem;
+}

@@ -36,7 +36,7 @@ export default function Counter({
 
   return (
     <div className={classes([styles.container])}>
-      <Button prefix={<FaPlus />} onClick={onIncreaseCounter} shape="rounded" />
+      <Button prefix={<FaMinus />} onClick={onDecreaseCounter} shape="rounded" />
       <Text
         className={styles.counterText}
         text={`${counter}`}
@@ -45,7 +45,7 @@ export default function Counter({
         variant="span"
         color="dark"
       />
-      <Button prefix={<FaMinus />} onClick={onDecreaseCounter} shape="rounded" />
+      <Button prefix={<FaPlus />} onClick={onIncreaseCounter} shape="rounded" />
     </div>
   );
 }
