@@ -8,7 +8,7 @@ export default function NavList({ list }: NavListProps) {
   return (
     <div className={classes([styles.container])}>
       {list.map(item => (
-        <Link href={item.href} className={styles.link}>
+        <Link href={item.href} className={styles.link} key={item.title}>
           <Text text={item.title} color="primary" fontSize="md" />
         </Link>
       ))
