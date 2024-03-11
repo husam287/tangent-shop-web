@@ -12,6 +12,5 @@ type Story = StoryObj<typeof PaginationBar>;
 export const Default: Story = {
     args: {
         totalCount: 100,
-        currentPage: 3
     }
 };
