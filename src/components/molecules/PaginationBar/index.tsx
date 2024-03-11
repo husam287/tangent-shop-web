@@ -17,6 +17,7 @@ export default function PaginationBar({ totalCount }: PaginationBarProps) {
     selected: number;
   }) => {
     const targetPage = e.selected + 1
+    if (targetPage === currentPage) return
     setQuery("page", `${targetPage}`)
   }
 
@@ -29,7 +30,7 @@ export default function PaginationBar({ totalCount }: PaginationBarProps) {
         nextLabel={<IoIosArrowDropright />}
         previousLabel={<IoIosArrowDropleft />}
         breakLabel={<BiDotsHorizontal />}
-        initialPage={+currentPage}
+        initialPage={+currentPage - 1}
       />
     </div>
   );
