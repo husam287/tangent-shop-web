@@ -4,5 +4,7 @@ export interface ImageProps {
     src: string;
     alt: string;
     height: string;
-    isFullWidth?: boolean
+    isFullWidth?: boolean;
+    imgWidth?: number;
+    imgHeight?: number;
 }

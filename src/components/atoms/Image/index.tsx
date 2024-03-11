@@ -7,13 +7,15 @@ export default function Image({
   src,
   alt,
   height,
+  imgHeight = 100,
+  imgWidth = 100,
   isFullWidth = false
 }: ImageProps) {
   return (
     <NextImage
       objectFit="cover"
-      width={0}
-      height={0}
+      width={imgWidth}
+      height={imgHeight}
       src={src}
       alt={alt}
       style={{ height }}

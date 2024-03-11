@@ -27,7 +27,7 @@ export default function Navbar({ }: NavbarProps) {
           <Image
             src="/tangent-logo.jpeg"
             alt="tangent logo"
-            height="4rem"
+            height="3rem"
           />
 
           <Text text="TANGENT" color="primary" fontSize="2x" fontWeight="bold" variant="span" />
