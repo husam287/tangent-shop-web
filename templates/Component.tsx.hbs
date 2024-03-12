@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 
 export default function {{extractName name}}({ }: {{extractName name}}Props) {
   return (
-    <div className={classes([styles.container])}>
+    <div className={classes([styles.container])} data-testid="{{extractName name}}">
       {{extractName name}}
     </div>
   );

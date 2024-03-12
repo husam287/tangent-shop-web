@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <div className={classes([styles.container])}>
+    <div className={classes([styles.container])} data-testid="ProductCard">
       <Image
         src={product.thumbnail}
         alt={product.title}

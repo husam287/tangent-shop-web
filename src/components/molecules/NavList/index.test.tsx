@@ -4,7 +4,7 @@ import NavList from "."
 describe("<NavList />", () => {
     it("should rendered", () => {
 
-        render(<NavList />)
+        render(<NavList list={[]} />)
         const element = screen.getByTestId("NavList")
 
         expect(element).toBeInTheDocument()

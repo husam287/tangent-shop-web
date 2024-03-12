@@ -32,7 +32,9 @@ export default function Paper({
       style={{
         '--top': selectedtopSpacing,
         '--bottom': selectedBottomSpacing
-      } as CustomCSS}>
+      } as CustomCSS}
+      data-testid="Paper"
+      >
       {children}
     </div>
   );

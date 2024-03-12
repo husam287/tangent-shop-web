@@ -5,7 +5,7 @@ import ProductCard from "@/components/molecules/ProductCard";
 
 export default function ProductsList({ products }: ProductsListProps) {
   return (
-    <div className={classes([styles.container])}>
+    <div className={classes([styles.container])} data-testid="ProductsList">
       {products?.map(item => (
         <ProductCard product={item} key={item.id} />
       ))}

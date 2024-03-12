@@ -13,6 +13,7 @@ export default function Image({
 }: ImageProps) {
   return (
     <NextImage
+      data-testid="Image"
       width={imgWidth}
       height={imgHeight}
       src={src}

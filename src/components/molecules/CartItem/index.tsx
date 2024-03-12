@@ -29,7 +29,7 @@ export default function CartItem({
   );
 
   return (
-    <div className={classes([styles.container])}>
+    <div className={classes([styles.container])} data-testid="CartItem">
       <div className={styles.imageContainer}>
         <Image
           imgHeight={100}

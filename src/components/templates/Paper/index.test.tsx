@@ -3,8 +3,9 @@ import Paper from "."
 
 describe("<Paper />", () => {
     it("should rendered", () => {
+        const input = "test"
 
-        render(<Paper />)
+        render(<Paper>{input}</Paper>)
         const element = screen.getByTestId("Paper")
 
         expect(element).toBeInTheDocument()

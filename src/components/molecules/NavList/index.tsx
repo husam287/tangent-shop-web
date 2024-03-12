@@ -6,7 +6,7 @@ import Text from "@/components/atoms/Text";
 
 export default function NavList({ list }: NavListProps) {
   return (
-    <div className={classes([styles.container])}>
+    <div className={classes([styles.container])} data-testid="NavList">
       {list.map(item => (
         <Link href={item.href} className={styles.link} key={item.title}>
           <Text text={item.title} color="primary" fontSize="md" />

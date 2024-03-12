@@ -35,7 +35,7 @@ export default function CartSidebar({ }: CartSidebarProps) {
   };
 
   return (
-    <aside>
+    <aside data-testid="CartSidebar">
       <div
         className={
           classes([

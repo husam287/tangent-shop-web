@@ -27,7 +27,7 @@ export default function Navbar({ }: NavbarProps) {
   ]
 
   return (
-    <nav className={styles.container}>
+    <nav className={styles.container} data-testid="Navbar">
       <div className={styles.content}>
         <Link href="/" className={styles.logoContainer}>
           <Image

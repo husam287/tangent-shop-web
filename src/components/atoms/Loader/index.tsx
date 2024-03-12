@@ -17,7 +17,7 @@ export default function Loader({ size = 'sm', color = 'primary' }: LoaderProps) 
   const height = sizeMap.get(size) || defaultSize
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="Loader">
       <div
         className={styles["lds-ripple"]}
         style={{

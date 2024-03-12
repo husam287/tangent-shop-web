@@ -37,7 +37,7 @@ export default function Counter({
   }, [initValue]);
 
   return (
-    <div className={classes([styles.container])}>
+    <div className={classes([styles.container])} data-testid="Counter">
       <Button prefix={<FaMinus />} onClick={onDecreaseCounter} shape="rounded" />
       <Text
         className={styles.counterText}

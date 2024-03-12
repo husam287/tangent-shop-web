@@ -44,6 +44,7 @@ export default function Text({
     <TextNode
       className={classes([styles.text, className])}
       style={textStyle}
+      data-testid="Text"
     >
       {text}
     </TextNode>

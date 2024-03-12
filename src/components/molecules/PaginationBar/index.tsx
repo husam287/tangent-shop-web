@@ -22,7 +22,7 @@ export default function PaginationBar({ totalCount }: PaginationBarProps) {
   }
 
   return (
-    <div className={classes([styles.container])}>
+    <div className={classes([styles.container])} data-testid="PaginationBar">
       <ReactPaginate
         onPageChange={handlePageClick}
         pageCount={totalCount / LIMIT}
