@@ -1,4 +1,4 @@
-# Tangent Shop - E-commerce App
+# Tangent Shop - E-commerce Web App
 
 [Tangent Shop](https://tangent-shop-web.vercel.app/) is a Web e-commerce app built with Next14, designed to provide users with a seamless shopping experience. This project implements various features integrates fake data from [[Dummy JSON](https://dummyjson.com/)].
 
