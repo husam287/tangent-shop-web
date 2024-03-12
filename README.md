@@ -14,6 +14,7 @@
   - Builded as a sidebar appears from right.
   - Has cart items with price and quantity counter
   - Show total price within the checkout button
+  - Using localStorage for saving cart
 
 ## Technologies Used
 
